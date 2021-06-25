@@ -35,7 +35,7 @@ function preload(){
 
 function setup() {
   createCanvas(600, 200);
-  
+    
   trex = createSprite(50,180,20,50);
   
   trex.addAnimation("running", trex_running);
@@ -78,6 +78,7 @@ function draw() {
   text("Score: "+ score, 500,50);
   
   if (gameState===PLAY){
+    text("Score: "+ score, 500,50);
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
   
